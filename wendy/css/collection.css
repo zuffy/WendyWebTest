@@ -2,7 +2,6 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	background: #acd5c6;
-	width: 1300px;
 }
 
 .content {
@@ -26,16 +25,23 @@ body {
 }
 
 #pics {
+	float: left;
+	width: 100%;
+    overflow:hidden;
+}
+
+#pics ul {
 	list-style:none; /* 去掉ul前面的符号 */
     margin: 0px auto; /* 与外界元素的距离为0 */
-    padding: 0px; /* 与内部元素的距离为0 */
-    width: 380px; /* 宽度根据元素内容调整 */
+	float:left; /* 向左漂移，将竖排变为横排 */
+    left: 50%;
+	position: relative;
 }
 
 #pics li {
 	float:left; /* 向左漂移，将竖排变为横排 */
-	padding: 0px;
-    display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+	position: relative;
+    right: 50%;
 }
 
 #pics li img {

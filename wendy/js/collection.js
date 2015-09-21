@@ -4,7 +4,7 @@
 	
 	$(function(){
 
-		var list = $("#pics");
+		var list = $("#pics ul");
 		var content = "";
 
 		for (var i = 0; i < dataObject.length; i++) {
