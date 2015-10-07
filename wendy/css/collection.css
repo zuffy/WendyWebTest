@@ -2,11 +2,13 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	background: #acd5c6;
+
+	font-family: arial;
 }
 
 .content {
 	margin: auto;
-	max-width: 1000px;
+	font-size: 12px;
 }
 .mediaWrap {
 	margin: auto;
@@ -52,9 +54,17 @@ body {
 #pics li img {
 	cursor: pointer;
 }
-
+.words {
+	padding: 20px 0 0 0;
+	margin: auto;
+	max-width: 1200px;
+	font-size: 14px;
+}
 .words p {
 	text-align: center;
+}
+#descriptionTitle {
+	font-weight: bold;
 }
 
 #list {
