@@ -1,0 +1,20 @@
+.content {
+	width: 460px;
+	margin: 70px auto 0;
+}
+
+.content img {
+	float: left;
+}
+
+.contact {
+	float: left;
+	padding-left: 10px; 
+	font-size: 16px;
+	line-height: 1.8em;
+}
+
+.strong {
+	font-size: 20px;
+	font-weight: bold;
+}

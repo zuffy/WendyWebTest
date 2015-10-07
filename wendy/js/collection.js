@@ -9,7 +9,7 @@
 
 		for (var i = 0; i < dataObject.length; i++) {
 			var item = dataObject[i];
-			content += "<li index=\"" + i + "\"><img src=\"" + item.snapsrc + "\"></li>"; 
+			content += "<li index=\"" + i + "\"><a><img src=\"" + item.snapsrc + "\"></a></li>"; 
 		};
 
 		list.html(content);
@@ -30,14 +30,29 @@
 	function setItem(id) {
 		var data = dataObject[id]; 
 		$("#list ul").html("");
-		$("#videoContent").css("float", "");
-		$("#pictureContent").css("float", "");
 		$("#descriptionTitle").html(data.descTitle);
 		$("#description").html(data.desc);
+
+		var content = "";
+		var start = "", end = "";
+		
+		if(data.awards.type == AwardTypePic) {
+			start = "<ul>";
+			end = "</ul><p>Awards:&nbsp;&nbsp;</p>";
+			for (var i = 0; i < data.awards.urls.length; i++) {
+				var item = data.awards.urls[i];
+				content += "<li><img src=\"" + item.url + "\" height=\"45\"></li>"; 
+			};
+		} else if (data.awards.type == AwardTypeDes) {
+			content = data.awards.desc;
+		}
+		content = start + content + end;
+
+		$("#awards").html(content);
 		if (data.urls.length == 1){
 			if(data.type == TypeVideo) {
 				$("#videoContent").show();
-				$("#pictureContent").hide().css("width", 0);
+				$("#pictureContent").hide();
 				var url = data.urls[0].url;
 				createVideoIfnull(url);
 			} else if (data.type == TypePicCollection) {
@@ -46,7 +61,7 @@
 					videojs(oldPlayer).dispose();
 				}
 				$("#videoContent").hide();
-				$("#pictureContent").show().css("width", 750);
+				$("#pictureContent").show();
 				var url = data.urls[0].url;
 				createPic(url);
 			}
@@ -60,12 +75,11 @@
 		var content = "";
 		for (var i = 0; i < data.urls.length; i++) {
 			var item = data.urls[i];
-			content += "<li index=\"" + i + "\"><img src=\"" + item.snapsrc + "\"><p>"+ item.title +"</p></li>"; 
+			content += "<li index=\"" + i + "\"><a><img src=\"" + item.snapsrc + "\"><p>"+ item.title +"</p></a></li>"; 
 		};
 
 		list.html(content);
-		$("#videoContent").css("float", "left");
-		$("#pictureContent").css("float", "left");
+		
 
 		$("#list li").unbind("click").bind("click", function (){
 			var self = $(this);
@@ -83,7 +97,7 @@
 
 		if(data.type == TypeVideo) {
 			$("#videoContent").show();
-			$("#pictureContent").hide().css("width", 0);
+			$("#pictureContent").hide();
 			var url = data.urls[0].url;
 			createVideoIfnull(url);
 		} else if (data.type == TypePicCollection) {
@@ -92,7 +106,7 @@
 				videojs(oldPlayer).dispose();
 			}
 			$("#videoContent").hide();
-			$("#pictureContent").show().css("width", 750);
+			$("#pictureContent").show();
 			var url = data.urls[0].url;
 			createPic(url)
 		}
@@ -104,7 +118,7 @@
 		var oldPlayer = document.getElementById('video_id');
 			videojs(oldPlayer).dispose();
 		}
-		$("#videoContent").html("<video id=\"video_id\" class=\"video-js vjs-default-skin\" controls preload=\"none\" width=\"750\" height=\"480\" data-setup=\"{}\"></video>");
+		$("#videoContent").html("<video id=\"video_id\" class=\"video-js vjs-default-skin\" controls preload=\"none\" width=\"750\" height=\"578\" data-setup=\"{}\"></video>");
 		videojs('video_id', {}, function() {
 			myPlayer = this;
 			// myPlayer.src({ type: "video/mp4", src: url });
@@ -121,6 +135,8 @@
 
 var TypeVideo = 0;
 var TypePicCollection = 1;
+var AwardTypePic = 2;
+var AwardTypeDes = 3;
 var dataObject = [
 	{
 		"name": "bigstain",
@@ -131,6 +147,15 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": AwardTypePic,
+			"urls":[
+			{"url": "award/cannes.png"},
+			{"url": "award/onshow.png"},
+			{"url": "award/Spikes_Asia.gif"},
+			{"url": "award/Longxi.png"},
+			{"url": "award/greatwall.png"}
+		]},
 		"descTitle": "Ariel - Big Stain",
 		"desc": "Originally, the client’s brief was to ask us to do a poster for an event to promote a new product, which could remove stain very easily. So easy that it made cleaning stain fun instead of a painful job. So we created this game of removing stain instead of just a poster to engage consumer."
 	},
@@ -158,6 +183,10 @@ var dataObject = [
 			}
 
 		],
+		"awards": {
+			"type": AwardTypeDes,
+			"desc": "360. TVC, print, social, digital, event, content."
+		},
 		"descTitle": "KFC - Vote",
 		"desc": "<p>2012 KFC was flooded with negative news. How can we bring consumer attention back to their product? The last launch of crispy chicken in the test market had brought a lot of noise of it replacing the original, we made use of this situation and announced that we would have either original or crispy chicken and asked consumer to vote! </p><p>This was the first time people in China could vote! It successfully create lots of noise which once again bring the focus is on the product.</p>"
 	},
@@ -186,8 +215,11 @@ var dataObject = [
 			}
 
 		],
-		"descTitle": "aaa",
-		"desc": "bbb"
+		"awards": {
+			"type": AwardTypeDes,
+			"desc": "360. TVC, print, social, digital, event, content."},
+		"descTitle": "KFC - Menu Revamp",
+		"desc": "To make a bold statement that they had changed, the first time in KFC history they launched a new menu with 15 new items! To match with this boldness, the first time in history, we had 4 celebrities as spokespersons at the same time, each representing one category of food. To make use of their fans, they competed in who got more LIKE from fans. They also asked fans to vote which KFC shop they would actually visit."
 	},
 
 	{
@@ -199,6 +231,9 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": null,
+		},
 		"descTitle": "KOTEX",
 		"desc": "Most TVC in this catergory was blue & white with cheerful girls jumping around. Since their packaging was a black box which consumer love, we made the tone & manner of TVC stylish. Message was very simple: no compromise to only one texture."
 	},
@@ -212,6 +247,9 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": null
+		},
 		"descTitle": "KFC - TASTING CHINA",
 		"desc": "<p>KFC was bringing in a new flavour - Zanthoxylum Armatum藤椒 to the food menu. </p><p>This is a spice often used in Si Chuan. </p><p>We used the style of a hot TV program  ‘Tasting  China’ to promote this new product.</p>"
 	},
@@ -225,6 +263,9 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": null
+		},
 		"descTitle": "ARAWANA COOKING OIL – OLYMPICS",
 		"desc": "Arawana cooking oil was sponsoring 2008 China Olympics. The challenge was how to relate cooking oil to Olympic. We capitalised on the Chinese phase 'ADD OIL', which means 'keep going'. Different Chinese nations passing 'add oil'(encouragement) to one another using different language."
 	},
@@ -238,6 +279,9 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": null
+		},
 		"descTitle": "HEAD & SHOULDERS - COOL WAY",
 		"desc": "This TVC was for a menthol shampoo that targeted young people which coat scientist can't relate to them. How to remove dandruff in a cool way? H&S or no way. This campaign started in China and later also ran in Europe, Asia Pacific and USA."
 	},
@@ -252,6 +296,12 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": AwardTypePic,
+			"urls":[
+			{"url": "award/times.png"},
+			{"url": "award/hk4a.jpg"}
+		]},
 		"descTitle": "HEAD & SHOULDERS METEOR",
 		"desc": "Head & Shoulders is famous of removing dandruff. This is a simple analogy to say H&S can remove any kind of white dot and make your wish of no dandruff comes true."
 	},
@@ -265,6 +315,9 @@ var dataObject = [
 			"url":"mp4/oceans-clip.mp4",
 			"snapsrc": ""
 		}],
+		"awards": {
+			"type": null,
+		},
 		"descTitle": "CTI - HIT",
 		"desc": "Back in 1996 HK only had one telecom company, CSL. CTI wanted to give HK Government pressure to open up the telecom market in HK."
 	},
@@ -289,6 +342,15 @@ var dataObject = [
 				"snapsrc": "images/collection/printright3.gif"
 			}
 		],
+		"awards": {
+			"type": AwardTypePic,
+			"urls":[
+			{"url": "award/cannes.png"},
+			{"url": "award/times.png"},
+			{"url": "award/Longxi.png"},
+			{"url": "award/hk4a.jpg"},
+			{"url": "award/greatwall.png"},
+		]},
 		"descTitle": "HEAD & SHOULDERS - EFFICACY CAMPAIGN",
 		"desc": ""
 	},
@@ -313,6 +375,14 @@ var dataObject = [
 				"snapsrc": "images/collection/tideright_3.gif"
 			}
 		],
+		"awards": {
+			"type": AwardTypePic,
+			"urls":[
+			{"url": "award/cannes.png"},
+			{"url": "award/Spikes_Asia.gif"},
+			{"url": "award/Longxi.png"},
+			{"url": "award/greatwall.png"}
+		]},
 		"descTitle": "HEAD & SHOULDERS - EFFICACY CAMPAIGN",
 		"desc": ""
 	},
@@ -342,6 +412,9 @@ var dataObject = [
 				"snapsrc": "images/collection/arielcrab4.jpg"
 			}
 		],
+		"awards": {
+			"type": AwardTypePic,
+			"urls":[{"url": "award/cannes.png"}]},
 		"descTitle": "Ariel - Be Prepared",
 		"desc": ""
 	}

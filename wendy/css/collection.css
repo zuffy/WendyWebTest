@@ -6,16 +6,21 @@ body {
 
 .content {
 	margin: auto;
-	width: 1000px;
+	max-width: 1000px;
 }
-
+.mediaWrap {
+	margin: auto;
+	width: 750px;
+}
 .mediaContent {
-	margin:30px auto;
+	margin:30px auto 10px;
+	position: relative;
 }
 
 #videoContent {
 	margin:auto;
 	width:750px;
+	
 	padding-right: 20px;
 }
 
@@ -53,20 +58,30 @@ body {
 }
 
 #list {
-	float: left;
+	position: absolute;
+	bottom: 0px;
+	right: -210px;
 }
 
-#list ul {
+#list ul{
 	list-style:none; /* 去掉ul前面的符号 */
     margin: 0px auto; /* 与外界元素的距离为0 */
 }
 #list li {
 	width: 200px;
-	margin-bottom: 20px;
+	margin-top: 20px;
 	font-size: 9px;
 	cursor: pointer;
 }
 
+#awards ul, #awards p{
+	float:right;
+}
 
+#awards li {
+	float:left;
+	position: relative;
+}
 
+a:hover img{filter:alpha(Opacity=70);-moz-opacity:0.7;opacity: 0.7;}
 

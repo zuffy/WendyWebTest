@@ -25,7 +25,7 @@ body {
 	list-style:none; /* 去掉ul前面的符号 */
     margin: 0px auto; /* 与外界元素的距离为0 */
     padding: 0px; /* 与内部元素的距离为0 */
-    width: 380px; /* 宽度根据元素内容调整 */
+    width: 458px; /* 宽度根据元素内容调整 */
 }
 
 #nav li {
@@ -33,9 +33,9 @@ body {
 	background-color: #d0e4db; /* 背景色 */
     border: 1px #8bb8a7 solid; /* 边框 */
     color: #566560; /* 文字颜色 */
-    display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */
-    line-height: 1.35em; /* 行高 */
-    padding: 4px 20px; /* 内部填充的距离 */
+    width: 150px;
+    height: 28px;
+    line-height: 28px; /* 行高 */
     text-decoration: none; /* 不显示超链接下划线 */
     white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
 }
@@ -43,20 +43,25 @@ body {
 	margin-bottom: 50px;
 }
 #nav ul li a {
+    display: block;
+    border: 1px #8bb8a7 solid; /* 边框 */
 	color: #566560;
+	height: 100%;
+	width: 100%;
     text-decoration: none; /* 不显示超链接下划线 */
+    text-align: center;
 }
 
 /* 所有class为menu的div中的ul中的a样式(鼠标移动到元素中的样式) */
 #nav ul li a:hover
 {
-    background-color: #bfcbd6; /* 背景色 */
+    background-color: #d9e3be; /* 背景色 */
     color: #566560; /* 文字颜色 */
 }
 /* 所有class为menu的div中的ul中的a样式(鼠标点击元素时的样式) */
 #nav ul li a:active
 {
-    background-color: #465c71; /* 背景色 */
+    background-color: #d9e3be; /* 背景色 */
     color: #566560; /* 文字颜色 */
 }
 
