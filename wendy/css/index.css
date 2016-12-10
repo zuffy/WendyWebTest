@@ -1,0 +1,40 @@
+body {
+	*
+	background-color: /*#a6beb1*/ #00f;
+}
+.content {
+	margin: 0 auto 0;
+	width: 1950px;
+	height: 880px;
+	background: #a6beb1 url('../images/index/index_bg.jpg')  no-repeat left top;
+}
+
+a.services {
+	display: block;
+	width:289px;
+	height:283px;
+	background: #a6beb1 url('../images/index/services.jpg')  no-repeat left top;
+	float: left;
+    position: relative;
+    top: 171px;
+    left: 1397px;
+}
+
+a.services:hover {
+	background: #a6beb1 url('../images/index/services_hover.jpg')  no-repeat left top;	
+}
+
+a.achievement {
+	display: block;
+	width:198px;
+	height:196px;
+	background: #a6beb1 url('../images/index/achievement.jpg')  no-repeat left top;
+	float: left;
+    position: relative;
+    top: 489px;
+    left: 1145px;
+}
+
+a.achievement:hover {
+	background: #a6beb1 url('../images/index/achievement_hover.jpg')  no-repeat left top;	
+}
