@@ -1,0 +1,10 @@
+body {
+	background-color: #a6beb1 /*#00f*/;
+}
+
+.content {
+	margin: 0 auto 0;
+	width: 1920px;
+	height: 880px;
+	background: #a6beb1 url('../images/achievement.jpg')  no-repeat left top;
+}

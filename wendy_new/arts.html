@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>arts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/arts.css">
+<link href="css/video-js.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="content" class="content">
+
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/video.min.js"></script>
+<script src="js/build/react.js"></script>
+<script src="js/build/react-dom.js"></script>
+<script src="js/build/browser.min.js"></script>
+<script src="js/build/jquery.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/constant.js"></script>
+
+<script>
+  videojs.options.flash.swf = "http://example.com/path/to/video-js.swf"
+</script>
+<!--<script type="text/babel" src="js/artCollection.js"></script>-->
+<script type="text/babel">
+
+	var BigCanvas = React.createClass({
+		
+		getInitialState: function() {
+			return {
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("BigCanvas did mount!");
+		},
+
+		render: function() {
+			return (
+				<div> hi this big cancas!</div>
+			);
+		}
+	});
+
+
+	var ScreenShoots = React.createClass({
+
+		handleChange: function(index) {
+			console.log('index:' + index);
+			this.setState({'current': index});
+		},
+		
+		getInitialState: function() {
+			return {
+				data: constant.data[this.props.name],
+				name: this.props.name,
+				current: this.props.id
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("ScreenShoots did mount!");
+		},
+
+		render: function() {
+			var self = this;
+			//console.log(this.state.data["urls"]);
+			return (
+				<ol>
+				{
+					self.state.data["urls"].map(function (item, i) {
+						return <li 
+							className={self.state.current == i ? 'haha' : ''}
+							key={i} onClick={self.handleChange.bind(null, i)}>{item.title}</li>;
+					})
+				}
+				</ol>
+			);
+		}
+	});
+
+
+	var CornerPlace = React.createClass({
+		
+		getInitialState: function() {
+			return {
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("CornerPlace did mount!");
+		},
+
+		render: function() {
+			return (
+				<div> hi this is corner with description or awards!</div>
+			);
+		}
+	});
+
+
+	var Description = React.createClass({
+		
+		getInitialState: function() {
+			return {
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("Description did mount!");
+		},
+
+		render: function() {
+			return (
+				<div> hi this is descriptions!</div>
+			);
+		}
+	});
+
+
+	var ArtShowView = React.createClass({
+		
+		getInitialState: function() {
+			return {
+				name: this.props.name,
+				id: this.props.id
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("ArtShowView did mount!");
+		},
+
+		render: function() {
+			return (
+				<div>
+					<BigCanvas />
+					<ScreenShoots name={this.state.name} id={this.state.id}/>
+					<CornerPlace />
+					<Description />
+				</div>
+			);
+		}
+	});
+
+	
+	var App = React.createClass({
+		getInitialState: function() {
+			var name = utils.paramAtPath("name") || "default";
+			var id = utils.paramAtPath("id") || 0;
+			return {
+				name: name,
+				id: id
+			};
+		},
+
+		componentDidMount: function() {
+			console.log("App did mount!");
+		},
+
+		render: function() {
+			return (
+				<ArtShowView name={this.state.name} id={this.state.id}/>
+			);
+		}
+	});
+
+	ReactDOM.render(
+		<App />,
+		document.getElementById('content')
+	);
+
+</script>
+
+</html>
