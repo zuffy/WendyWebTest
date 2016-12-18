@@ -1,7 +1,80 @@
 body {
 	background-color: #fff;
 }
+#video_id {
+	width: 100%; important!
+}
+.mainContainer {
+	min-width: 825px;
+}
 
-.haha {
-	color: red;
+.navBar {
+	float: left;
+	padding: 10px 0;
+}
+.snapIcon {
+	display: inline;
+	padding: 10px 0 0 10px;
+}
+
+.snapIcon img{
+	-moz-box-shadow: 0 0 5px #423939;
+	-webkit-box-shadow: 0 0 5px #423939;
+	box-shadow: 0px 0px 5px #423939;
+}
+
+.snapIcon img:hover{
+	-moz-box-shadow: 0 0 5px #f00;
+	-webkit-box-shadow: 0 0 5px #f00;
+	box-shadow: 0px 0px 5px #f00;
+	cursor: pointer;
+}
+
+.current img{
+	-moz-box-shadow: 0 0 5px #11d2c3;
+	-webkit-box-shadow: 0 0 5px #11d2c3;
+	box-shadow: 0px 0px 5px #11d2c3;
+}
+
+#videoContent, .imageshow {
+	width:100%;
+	min-width: 825px;
+	height:auto; 
+	box-shadow: 0px 0px 10px #000;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* awards */
+.awards {
+	float: right;
+	text-align: right;
+}
+
+ol{
+	list-style:none; /* 去掉ul前面的符号 */
+    margin: 0px auto; /* 与外界元素的距离为0 */
+}
+
+.awards li {
+	float:left;
+	position: relative;
+}
+
+/* description */
+.desContainer {
+	padding: 10px;
+}
+
+.title {
+	font-size: 18;
+    font-weight: bold;
+}
+
+.desc {
+	font-size: 16;
+	color:gray;
 }

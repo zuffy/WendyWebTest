@@ -294,32 +294,43 @@
 
 			"urls": [
 				{
-					"type": TypePicCollection,
+					"type": TypeVideo,
 					"title": "360. TVC, print, social, digital plateform, event, content.",
-					"url":"images/collection/printright1.jpg",
+					"url":"../wendy/mp4/oceans-clip.mp4",
 					"snapsrc": "images/collection/printright1.jpg"
 				},{
-					"type": TypePicCollection,
+					"type": TypeVideo,
 					"title": "Fight to raise the heat in internet.",
-					"url":"images/collection/printright3.jpg",
+					"url":"tt.mp4",
 					"snapsrc": "images/collection/printright2.jpg"
 				},{
 					"type": TypePicCollection,
 					"title": "Chen Kun representing original taste chicken.",
 					"url":"images/collection/printright3.gif",
-					"snapsrc": "images/collection/printright3.jpg"
+					"snapsrc": "images/collection/printright3.gif"
 				}
 
 			],
 
+			"awards": {
+				"desc": "AwardTypdePic",
+				"urls":[
+					{"url": "images/award/cannes.png"},
+					{"url": "images/award/onshow.png"},
+					{"url": "images/award/Spikes_Asia.gif"},
+					{"url": "images/award/Longxi.png"},
+					{"url": "images/award/greatwall.png"}
+				]
+			},
+
 			"descTitle": "KFC - Vote",
-			"desc": "<p>2012 KFC was flooded with negative news. How can we bring consumer attention back to their product? The last launch of crispy chicken in the test market had brought a lot of noise of it replacing the original, we made use of this situation and announced that we would have either original or crispy chicken and asked consumer to vote! </p><p>This was the first time people in China could vote! It successfully create lots of noise which once again bring the focus is on the product.</p>"
+			"desc": "2012 KFC was flooded with negative news. How can we bring consumer attention back to their product? The last launch of crispy chicken in the test market had brought a lot of noise of it replacing the original, we made use of this situation and announced that we would have either original or crispy chicken and asked consumer to vote! </p><p>This was the first time people in China could vote! It successfully create lots of noise which once again bring the focus is on the product."
 		}
 	}
 
 	var constant = {
-		View_Type_Picture : TypeVideo, 
-		View_Type_Movie : TypePicCollection, 
+		View_Type_Movie : TypeVideo, 
+		View_Type_Picture : TypePicCollection, 
 		data : _data
 	}
 
