@@ -18,6 +18,7 @@ body {
 }
 
 .snapIcon img{
+	height: 88px;
 	-moz-box-shadow: 0 0 5px #423939;
 	-webkit-box-shadow: 0 0 5px #423939;
 	box-shadow: 0px 0px 5px #423939;
@@ -62,6 +63,10 @@ ol{
 .awards li {
 	float:left;
 	position: relative;
+}
+
+.awardsTitle {
+	min-height: 25px;
 }
 
 /* description */

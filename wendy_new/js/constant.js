@@ -4,328 +4,168 @@
 	var TypePicCollection = 1;
 	var AwardTypePic = 2;
 	var AwardTypeDes = 3;
-	var dataObject = [
-		{
-			"name": "bigstain",
-			"snapsrc": "images/collection/bigstain.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": AwardTypePic,
-				"urls":[
-				{"url": "award/cannes.png"},
-				{"url": "award/onshow.png"},
-				{"url": "award/Spikes_Asia.gif"},
-				{"url": "award/Longxi.png"},
-				{"url": "award/greatwall.png"}
-			]},
-			"descTitle": "Ariel - Big Stain",
-			"desc": "Originally, the client’s brief was to ask us to do a poster for an event to promote a new product, which could remove stain very easily. So easy that it made cleaning stain fun instead of a painful job. So we created this game of removing stain instead of just a poster to engage consumer."
-		},
-		{
-			"name": "kfcvote",
-			"snapsrc": "images/collection/kfcvote.jpg",
-			"type": TypeVideo,
-			"urls": [
-				{
-					"title": "360. TVC, print, social, digital plateform, event, content.",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/360s.gif"
-				},{
-					"title": "Fight to raise the heat in internet.",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/fights.gif"
-				},{
-					"title": "Chen Kun representing original taste chicken.",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/chenkuns.gif"
-				},{
-					"title": "Ke Zhen Dong representing crispy chicken.",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/kezhendongs.gif"
-				}
-
-			],
-			"awards": {
-				"type": AwardTypeDes,
-				"desc": "360. TVC, print, social, digital, event, content."
-			},
-			"descTitle": "KFC - Vote",
-			"desc": "<p>2012 KFC was flooded with negative news. How can we bring consumer attention back to their product? The last launch of crispy chicken in the test market had brought a lot of noise of it replacing the original, we made use of this situation and announced that we would have either original or crispy chicken and asked consumer to vote! </p><p>This was the first time people in China could vote! It successfully create lots of noise which once again bring the focus is on the product.</p>"
-		},
-
-		{
-			"name": "kfcmenurevamp",
-			"snapsrc": "images/collection/kfcmenurevamp.jpg",
-			"type": TypeVideo,
-			"urls": [
-				{
-					"title": "360 Case",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/menurevamp360s.jpg"
-				},{
-					"title": "TVC Launch",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/menurevamptvcs.jpg"
-				},{
-					"title": "Internet: Wu Mo Chou declaration",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/menurevampwu.jpg"
-				},{
-					"title": "Internet: Zhang Liang declaration",
-					"url":"mp4/oceans-clip.mp4",
-					"snapsrc": "images/collection/menurevampzhang.jpg"
-				}
-
-			],
-			"awards": {
-				"type": AwardTypeDes,
-				"desc": "360. TVC, print, social, digital, event, content."},
-			"descTitle": "KFC - Menu Revamp",
-			"desc": "To make a bold statement that they had changed, the first time in KFC history they launched a new menu with 15 new items! To match with this boldness, the first time in history, we had 4 celebrities as spokespersons at the same time, each representing one category of food. To make use of their fans, they competed in who got more LIKE from fans. They also asked fans to vote which KFC shop they would actually visit."
-		},
-
-		{
-			"name": "kotex",
-			"snapsrc": "images/collection/kotex.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": null,
-			},
-			"descTitle": "KOTEX",
-			"desc": "Most TVC in this catergory was blue & white with cheerful girls jumping around. Since their packaging was a black box which consumer love, we made the tone & manner of TVC stylish. Message was very simple: no compromise to only one texture."
-		},
-
-		{
-			"name": "kfctastingchina",
-			"snapsrc": "images/collection/kfctastingchina.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": null
-			},
-			"descTitle": "KFC - TASTING CHINA",
-			"desc": "<p>KFC was bringing in a new flavour - Zanthoxylum Armatum藤椒 to the food menu. </p><p>This is a spice often used in Si Chuan. </p><p>We used the style of a hot TV program  ‘Tasting  China’ to promote this new product.</p>"
-		},
-
-		{
-			"name": "oilolympic",
-			"snapsrc": "images/collection/oilolympic.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": null
-			},
-			"descTitle": "ARAWANA COOKING OIL – OLYMPICS",
-			"desc": "Arawana cooking oil was sponsoring 2008 China Olympics. The challenge was how to relate cooking oil to Olympic. We capitalised on the Chinese phase 'ADD OIL', which means 'keep going'. Different Chinese nations passing 'add oil'(encouragement) to one another using different language."
-		},
-
-		{
-			"name": "hscoolway",
-			"snapsrc": "images/collection/hscoolway.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": null
-			},
-			"descTitle": "HEAD & SHOULDERS - COOL WAY",
-			"desc": "This TVC was for a menthol shampoo that targeted young people which coat scientist can't relate to them. How to remove dandruff in a cool way? H&S or no way. This campaign started in China and later also ran in Europe, Asia Pacific and USA."
-		},
-
-
-		{
-			"name": "hsmeteor",
-			"snapsrc": "images/collection/hsmeteor.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": AwardTypePic,
-				"urls":[
-				{"url": "award/times.png"},
-				{"url": "award/hk4a.jpg"}
-			]},
-			"descTitle": "HEAD & SHOULDERS METEOR",
-			"desc": "Head & Shoulders is famous of removing dandruff. This is a simple analogy to say H&S can remove any kind of white dot and make your wish of no dandruff comes true."
-		},
-
-		{
-			"name": "cti",
-			"snapsrc": "images/collection/cti.jpg",
-			"type": TypeVideo,
-			"urls": [{
-				"title": "",
-				"url":"mp4/oceans-clip.mp4",
-				"snapsrc": ""
-			}],
-			"awards": {
-				"type": null,
-			},
-			"descTitle": "CTI - HIT",
-			"desc": "Back in 1996 HK only had one telecom company, CSL. CTI wanted to give HK Government pressure to open up the telecom market in HK."
-		},
-
-		{
-			"name": "hsdandruff",
-			"snapsrc": "images/collection/hsdandruff.jpg",
-			"type": TypePicCollection,
-			"urls": [{
-					"title": "",
-					"url":"images/collection/printright1.jpg",
-					"snapsrc": "images/collection/printright1.jpg"
-				},
-				{
-					"title": "",
-					"url":"images/collection/printright2.jpg",
-					"snapsrc": "images/collection/printright2.jpg"
-				},
-				{
-					"title": "",
-					"url":"images/collection/printright3.gif",
-					"snapsrc": "images/collection/printright3.gif"
-				}
-			],
-			"awards": {
-				"type": AwardTypePic,
-				"urls":[
-				{"url": "award/cannes.png"},
-				{"url": "award/times.png"},
-				{"url": "award/Longxi.png"},
-				{"url": "award/hk4a.jpg"},
-				{"url": "award/greatwall.png"},
-			]},
-			"descTitle": "HEAD & SHOULDERS - EFFICACY CAMPAIGN",
-			"desc": ""
-		},
-
-		{
-			"name": "tidelight",
-			"snapsrc": "images/collection/tidelight.jpg",
-			"type": TypePicCollection,
-			"urls": [{
-					"title": "",
-					"url":"images/collection/tideright_1.gif",
-					"snapsrc": "images/collection/tideright_1.gif"
-				},
-				{
-					"title": "",
-					"url":"images/collection/tideright_2.gif",
-					"snapsrc": "images/collection/tideright_2.gif"
-				},
-				{
-					"title": "",
-					"url":"images/collection/tideright_3.gif",
-					"snapsrc": "images/collection/tideright_3.gif"
-				}
-			],
-			"awards": {
-				"type": AwardTypePic,
-				"urls":[
-				{"url": "award/cannes.png"},
-				{"url": "award/Spikes_Asia.gif"},
-				{"url": "award/Longxi.png"},
-				{"url": "award/greatwall.png"}
-			]},
-			"descTitle": "HEAD & SHOULDERS - EFFICACY CAMPAIGN",
-			"desc": ""
-		},
-
-		{
-			"name": "arielcrab",
-			"snapsrc": "images/collection/arielcrab.jpg",
-			"type": TypePicCollection,
-			"urls": [{
-					"title": "",
-					"url":"images/collection/arielcrab1.gif",
-					"snapsrc": "images/collection/arielcrab1.gif"
-				},
-				{
-					"title": "",
-					"url":"images/collection/arielcrab2.gif",
-					"snapsrc": "images/collection/arielcrab2.gif"
-				},
-				{
-					"title": "",
-					"url":"images/collection/arielcrab3.jpg",
-					"snapsrc": "images/collection/arielcrab3.jpg"
-				},
-				{
-					"title": "",
-					"url":"images/collection/arielcrab4.jpg",
-					"snapsrc": "images/collection/arielcrab4.jpg"
-				}
-			],
-			"awards": {
-				"type": AwardTypePic,
-				"urls":[{"url": "award/cannes.png"}]},
-			"descTitle": "Ariel - Be Prepared",
-			"desc": ""
-		}
-
-	];
-
-
+	
 	var _data = {
-		"lightbulb": {
+		"dandruff": {
 
 			"urls": [
 				{
-					"type": TypeVideo,
-					"title": "360. TVC, print, social, digital plateform, event, content.",
-					"url":"../wendy/mp4/oceans-clip.mp4",
+					"type": TypePicCollection,
+					"title": "flag.jpg",
+					"url":"images/bigImg/flag.jpg",
 					"snapsrc": "images/collection/printright1.jpg"
 				},{
-					"type": TypeVideo,
-					"title": "Fight to raise the heat in internet.",
-					"url":"tt.mp4",
+					"type": TypePicCollection,
+					"title": "cross.jpg",
+					"url": "images/bigImg/cross.jpg",
 					"snapsrc": "images/collection/printright2.jpg"
 				},{
 					"type": TypePicCollection,
-					"title": "Chen Kun representing original taste chicken.",
-					"url":"images/collection/printright3.gif",
+					"title": "fullstop.jpg",
+					"url":"images/bigImg/fullstop.jpg",
 					"snapsrc": "images/collection/printright3.gif"
 				}
 
 			],
 
 			"awards": {
-				"desc": "AwardTypdePic",
+				"desc": "",
 				"urls":[
 					{"url": "images/award/cannes.png"},
-					{"url": "images/award/onshow.png"},
 					{"url": "images/award/Spikes_Asia.gif"},
 					{"url": "images/award/Longxi.png"},
 					{"url": "images/award/greatwall.png"}
 				]
 			},
 
-			"descTitle": "KFC - Vote",
-			"desc": "2012 KFC was flooded with negative news. How can we bring consumer attention back to their product? The last launch of crispy chicken in the test market had brought a lot of noise of it replacing the original, we made use of this situation and announced that we would have either original or crispy chicken and asked consumer to vote! </p><p>This was the first time people in China could vote! It successfully create lots of noise which once again bring the focus is on the product."
+			"descTitle": "HEAD & SHOULDERS",
+			"desc": "<p>Idea:Dandruff surrender to Head & Shoulders.</p> <p>This campaign win the first cannes in China.</p>"
 		}
+
+		,"stainattack": {
+
+			"urls": [
+				{
+					"type": TypePicCollection,
+					"title": "ArielDefence Crab.jpg",
+					"url":"images/bigImg/ArielDefence Crab.jpg",
+					"snapsrc": "images/collection/arielcrab1.gif"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Spaghetti.jpg",
+					"url": "images/bigImg/ArielDefence Spaghetti.jpg",
+					"snapsrc": "images/collection/arielcrab2.gif"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Hotdog.jpg",
+					"url":"images/bigImg/ArielDefence Hotdog.jpg",
+					"snapsrc": "images/collection/arielcrab3.jpg"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Burger.jpg",
+					"url":"images/bigImg/ArielDefence Burger.jpg",
+					"snapsrc": "images/collection/arielcrab4.jpg"
+				}
+
+			],
+
+			"awards": {
+				"desc": "Headline:Be prepared with Ariel",
+				"urls":[
+					{"url": "images/award/cannes.png"},
+					{"url": "images/award/london.png"}
+				]
+			},
+
+			"descTitle": "Ariel washing powder",
+			"desc": "<p>You don't know when will you be attacted by stain. Be Prepared.</p>"
+
+		}
+
+
+		,"soufeel": {
+
+			"urls": [
+				{
+					"type": TypePicCollection,
+					"title": "Window",
+					"url":"images/bigImg/Soufeel window.jpg",
+					"snapsrc": "images/collection/soufeel_windown.png"
+				},{
+					"type": TypePicCollection,
+					"title": "DIY area",
+					"url": "images/bigImg/Soufeel diywall.jpg",
+					"snapsrc": "images/collection/soufeel2.png"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Hotdog.jpg",
+					"url":"images/bigImg/Soufeel crystal.jpg",
+					"snapsrc": "images/collection/soufeel3.png"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Burger.jpg",
+					"url":"images/bigImg/Soufeel KV.jpg",
+					"snapsrc": "images/collection/soufeel4.png"
+				},{
+					"type": TypePicCollection,
+					"title": "ArielDefence Burger.jpg",
+					"url":"images/bigImg/Soufeel logo.jpg",
+					"snapsrc": "images/collection/soufeel5.png"
+				}
+
+			],
+
+			"awards": {
+				"desc": "",
+				"urls":[
+				]
+			},
+
+			"descTitle": "SOUFFEL",
+			"desc": "<p>Brief:Develop total brand look for Soufeel. Including Logo,VI,KV & Shop design.</p>\
+			<p>Souffeel is a new jewerley brand similar to Pandora.</p>\
+			<p>Idea:Soul+feel = human connection and feelings.</p>\
+			<p>Its young,artistic and internaltionl.</p>\
+			<p>We make the shop like secret garden.Once consumer enter the shop, they started the journey of connection and feel.</p>"
+
+		}
+
+		,"lightbulb": {
+
+			"urls": [
+				{
+					"type": TypePicCollection,
+					"title": "flag.jpg",
+					"url":"images/bigImg/flag.jpg",
+					"snapsrc": "images/collection/printright1.jpg"
+				},{
+					"type": TypePicCollection,
+					"title": "cross.jpg",
+					"url": "images/bigImg/cross.jpg",
+					"snapsrc": "images/collection/printright2.jpg"
+				},{
+					"type": TypePicCollection,
+					"title": "fullstop.jpg",
+					"url":"images/bigImg/fullstop.jpg",
+					"snapsrc": "images/collection/printright3.gif"
+				}
+
+			],
+
+			"awards": {
+				"desc": "",
+				"urls":[
+					{"url": "images/award/cannes.png"},
+					{"url": "images/award/Spikes_Asia.gif"},
+					{"url": "images/award/Longxi.png"},
+					{"url": "images/award/greatwall.png"}
+				]
+			},
+
+			"descTitle": "Tide",
+			"desc": "<p>Idea:Dandruff surrender to Head & Shoulders.</p> <p>This campaign win the first cannes in China.</p>"
+		}
+
 	}
 
 	var constant = {

@@ -169,7 +169,7 @@
 			console.log(self.props.data);
 			return (
 				<div className="awards"> 
-					{this.props.data.desc}
+					<p className='awardsTitle'>{this.props.data.desc} </p>
 					<ol className='awardsList'>
 					{
 						self.props.data["urls"].map(function (item, i) {
@@ -200,7 +200,7 @@
 			return (
 				<div className='clear desContainer'>
 					<p className='title'>{this.props.title}</p>
-					<p className='desc'>{this.props.desc}</p>
+					<p className='desc' dangerouslySetInnerHTML={{__html:this.props.desc}}></p>
 				</div>
 			);
 		}
