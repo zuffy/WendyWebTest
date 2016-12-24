@@ -1,5 +1,5 @@
-(function(context){
-	var utils = {
+// (function(context){
+	export const utils = {
 		paramAtPath: function(param) {
 			var path = window.location.search;
 			var reg = new RegExp("[\?]?" + param + "=([^&]+)", "");
@@ -12,6 +12,6 @@
 		}
 	}
 
-	context.utils = utils;
-
-})(window);
+	// context.utils = utils;
+	// return utils;
+// })(window);

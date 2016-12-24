@@ -1,0 +1,12 @@
+cnpm intsall webpack --save
+cnpm install babel-core
+cnpm install babel-loader
+cnpm install babel-preset-es2015//解析es6的
+cnpm install babel-preset-react//解析jsx语法
+cnpm install react
+cnpm install react-dom
+
+
+npm init
+cnpm install
+npm start

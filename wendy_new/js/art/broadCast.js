@@ -1,0 +1,1 @@
+export const broadData = new signals.Signal();

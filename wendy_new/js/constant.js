@@ -1,4 +1,4 @@
-(function(context){
+// (function(context){
 
 	var TypeVideo = 0;
 	var TypePicCollection = 1;
@@ -409,12 +409,12 @@
 
 	}
 
-	var constant = {
+	export const constant = {
 		View_Type_Movie : TypeVideo, 
 		View_Type_Picture : TypePicCollection, 
 		data : _data
 	}
 
-	context.constant = constant;
-
-})(window);
+	// context.constant = constant;
+	// return constant;
+// })(window);
