@@ -1,0 +1,14 @@
+{
+  "name": "wendy_new",
+  "version": "1.0.0",
+  "description": "wendy's web pro.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
