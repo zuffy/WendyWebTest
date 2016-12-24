@@ -13,7 +13,8 @@ body {
 	padding: 10px 0;
 }
 .snapIcon {
-	display: inline;
+	float:left;
+	display: block;
 	padding: 10px 0 0 10px;
 }
 
@@ -25,16 +26,16 @@ body {
 }
 
 .snapIcon img:hover{
-	-moz-box-shadow: 0 0 5px #f00;
-	-webkit-box-shadow: 0 0 5px #f00;
-	box-shadow: 0px 0px 5px #f00;
+	-moz-box-shadow: 0 0 5px #fbbb45;
+	-webkit-box-shadow: 0 0 5px #fbbb45;
+	box-shadow: 0px 0px 5px #fbbb45;
 	cursor: pointer;
 }
 
 .current img{
-	-moz-box-shadow: 0 0 5px #11d2c3;
+	/*-moz-box-shadow: 0 0 5px #11d2c3;
 	-webkit-box-shadow: 0 0 5px #11d2c3;
-	box-shadow: 0px 0px 5px #11d2c3;
+	box-shadow: 0px 0px 5px #11d2c3;*/
 }
 
 #videoContent, .imageshow {

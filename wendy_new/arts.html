@@ -32,7 +32,7 @@
 </script>
 <!--<script type="text/babel" src="js/artCollection.js"></script>-->
 <script type="text/babel">
-
+	var  debug = true;
 	var broadData = new signals.Signal(); //全局数据广播对象
 
 	var BigCanvas = React.createClass({
@@ -73,7 +73,11 @@
 		createVideoView: function(val) {
 			var currData = this.state.data.urls[val];
 			if(currData.type == constant.View_Type_Movie) {
-				this.createVideoIfnull(currData.url)
+				var url = currData.url;
+				if(debug){
+					url = "file:///C:/Users/zuffy.ma.SUPERD/Desktop/" + url;
+				}
+				this.createVideoIfnull(url)
 			}
 		},
 
@@ -137,6 +141,7 @@
 				<ol className='navBar'>
 				{
 					self.props.data["urls"].map(function (item, i) {
+						if(typeof(item.snapsrc) == "string" && item.snapsrc.length > 0){
 						var cc = 'snapIcon'
 						cc += self.state.current == i ? ' current' : '';
 						
@@ -144,7 +149,9 @@
 							className={cc}
 							key={i} onClick={self.handleChange.bind(null, i)}>
 							<img src={item.snapsrc} />
+							<p>{item.title}</p>
 							</li>;
+						}
 					})
 				}
 				</ol>
