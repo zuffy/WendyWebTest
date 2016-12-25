@@ -52,7 +52,6 @@ var BigCanvas = React.createClass({
 
 	createVideoIfnull: function(url) {
 		var self = this;
-
 		$("#videoContent").html("<video id='video_id' class='video-js vjs-default-skin' controls preload='none' height='578' data-setup='{}'></video>");
 
 		videojs('video_id', {}, function() {

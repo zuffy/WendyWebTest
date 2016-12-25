@@ -5,8 +5,7 @@ cnpm install babel-preset-es2015//解析es6的
 cnpm install babel-preset-react//解析jsx语法
 cnpm install react
 cnpm install react-dom
+cnpm install webpack-dev-server
+cnpm install open-browser-webpack-plugin
 
-
-npm init
-cnpm install
 npm start
