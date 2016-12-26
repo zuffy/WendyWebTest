@@ -24,10 +24,10 @@ module.exports = {
   },
   module: {
     loaders: [
-            {
+            /*{
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
-            },
+            },*/
 
             {
               test: /\.jsx?$/,//表示要变异的文件的类型，这里要编译的是js文件
@@ -46,9 +46,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' })
-    ,new webpack.ProvidePlugin({
+    /*,new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery:'jquery'
-    })
+    })*/
   ]
 };

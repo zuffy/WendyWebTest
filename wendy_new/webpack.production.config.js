@@ -1,38 +1,43 @@
 var webpack = require('webpack');
 var path = require('path');
-var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
-  devtool: 'cheap-source-map',
-  entry: [
-    path.resolve(__dirname, 'app/main.jsx'),
-  ],
+  entry: {
+    // main: path.resolve(__dirname, './main.jsx') ,
+    art: path.resolve(__dirname, './app/art/art.jsx')
+  },
+
   output: {
-    path: __dirname + '/build',
+    path: __dirname + '/static',
     publicPath: '/',
-    filename: './bundle.js'
+    filename: './js/[name].js'
   },
   module: {
-    loaders:[
-      { test: /\.css$/, include: path.resolve(__dirname, 'app'), loader: 'style-loader!css-loader' },
-      { test: /\.js[x]?$/, include: path.resolve(__dirname, 'app'), exclude: /node_modules/, loader: 'babel-loader' },
-    ]
+    loaders: [
+            /*{
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },*/
+
+            {
+              test: /\.jsx?$/,//表示要变异的文件的类型，这里要编译的是js文件
+              loader: 'babel-loader',//装载的哪些模块
+              exclude: /node_modules/,//标示不变异node_modules文件夹下面的内容
+              query: {//具体的编译的类型，
+                  compact: true,//表示不压缩
+                  presets: ['es2015', 'react']//我们需要编译的是es6和react
+              }
+          }
+        ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-  },
+  }
+  /*,
   plugins: [
-    new webpack.optimize.DedupePlugin(),
-    new uglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new CopyWebpackPlugin([
-      { from: './app/index.html', to: 'test.html' },
-      { from: './app/main.css', to: 'main.css' }
-    ]),
-  ]
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery:'jquery'
+    })
+  ]*/
 };
