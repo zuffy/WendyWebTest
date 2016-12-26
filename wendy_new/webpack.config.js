@@ -3,24 +3,24 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-  /*devServer: {
+  devServer: {
     historyApiFallback: true,
     hot: true,
     inline: true,
     progress: true,
-    contentBase: './app',
+    contentBase: './static',
     port: 8080
-  },*/
+  },
 
   entry: {
     // main: path.resolve(__dirname, './main.jsx') ,
-    art: path.resolve(__dirname, './js/art/art.jsx')
+    art: path.resolve(__dirname, './app/art/art.jsx')
   },
 
   output: {
-    path: __dirname + '/build',
+    path: __dirname + '/static',
     publicPath: '/',
-    filename: './[name].js'
+    filename: './js/[name].js'
   },
   module: {
     loaders: [
