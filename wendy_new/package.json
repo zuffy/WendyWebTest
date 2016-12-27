@@ -21,6 +21,6 @@
     "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
-  "author": "",
+  "author": "zuffy",
   "license": "ISC"
 }
