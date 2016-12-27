@@ -1,5 +1,6 @@
 body {
 	background-color: #fff;
+	font-family: Gill Sans MT;
 }
 #video_id {
 	width: 100%; important!
@@ -76,11 +77,11 @@ ol{
 }
 
 .title {
-	font-size: 18;
     font-weight: bold;
+    font-size: 28px;
 }
 
 .desc {
-	font-size: 16;
 	color:gray;
+	font-size: 23px;
 }
