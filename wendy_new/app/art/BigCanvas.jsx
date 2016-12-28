@@ -58,9 +58,10 @@ var BigCanvas = React.createClass({
 		var w = $(window).width();
 		w = w < 825 ? 825 : w;
 		var height = w * 9 / 16;
+		height = height < 880 ? height : 880;
 		// var content = $("#videoContent");
 		var content = $(".video-js");
-		console.log("fixSize content:" + content);
+		// console.log("fixSize content:" + content);
 		if(typeof content != "undefined") {
 			content.css("height", height + "px");
 		}
@@ -75,7 +76,7 @@ var BigCanvas = React.createClass({
 		var self = this;
 		$("#videoContent").html("<video id='video_id' class='video-js vjs-default-skin' controls preload='none' height='578' data-setup='{}'></video>");
 		self.fixSize();
-		videojs('video_id', {}, function() {
+		videojs('video_id', { "controls": true, "autoplay": true, "preload": "auto" }, function() {
 			self.myPlayer = this;
 			self.myPlayer.src({ type: "video/mp4", src: url });
 			console.log('set play url ad play: ' + url);
